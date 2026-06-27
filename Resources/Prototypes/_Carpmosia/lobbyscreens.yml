@@ -9,3 +9,9 @@
   background: /Textures/_Carpmosia/LobbyScreens/MedbayRedAlert.png
   title: lobby-state-background-medbayredalert-title
   artist: lobby-state-background-medbayredalert-artist
+
+- type: lobbyBackground
+  id: FirstWave
+  background: /Textures/_Carpmosia/LobbyScreens/FirstWave.png
+  title: lobby-state-background-firstwave-title
+  artist: lobby-state-background-firstwave-artist
