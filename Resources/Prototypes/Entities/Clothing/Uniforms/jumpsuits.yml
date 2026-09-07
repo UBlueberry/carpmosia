@@ -1,13 +1,15 @@
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitDeathSquad
-  name: death squad uniform
-  description: Advanced armored jumpsuit used by special forces in special operations.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+# Carpmosia-start - Remove Deathsquad
+# - type: entity
+#   parent: ClothingUniformBase
+#   id: ClothingUniformJumpsuitDeathSquad
+#   name: death squad uniform
+#   description: Advanced armored jumpsuit used by special forces in special operations.
+#   components:
+#   - type: Sprite
+#     sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+#   - type: Clothing
+#     sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+# Carpmosia-end - Remove Deathsquad
 
 - type: entity
   parent: ClothingUniformBase
@@ -56,15 +58,17 @@
     sprite: Clothing/Uniforms/Jumpsuit/bartender_purple.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingUniformBase, BaseCommandContraband, ClothingUniformFoldableBase] # Carpmosia-edit - Captain's jumpsuit is now foldable
   id: ClothingUniformJumpsuitCaptain
   name: captain's jumpsuit
   description: It's a blue jumpsuit with some gold markings denoting the rank of "Captain".
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
+  # Carpmosia-start - Captain's jumpsuit is now foldable
+  #- type: Clothing
+  #  sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
+  # Carpmosia-end - Captain's jumpsuit is now foldable
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -1060,8 +1064,8 @@
     sprite: Clothing/Uniforms/Jumpsuit/pirate.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/pirate.rsi
-  - type: AddAccentClothing
-    accent: PirateAccent
+  - type: PirateAccent
+    relayAccent: true
 
 - type: entity
   parent: ClothingUniformBase
